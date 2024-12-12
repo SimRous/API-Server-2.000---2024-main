@@ -174,7 +174,7 @@ function showAbout() {
     $("#aboutContainer").show();
 }
 function showConnexionForm(){
-    
+    noTimeout();
     loggedUser = null;
     hidePosts();
     $('#commit').hide();
@@ -501,9 +501,7 @@ function attach_Posts_UI_Events_Callback() {
                 await Likes_API.Save(data,true);
             }
         }
-        if (!Likes_API.error){
-            postsPanel.update();
-        }
+        postsPanel.update();
     });
     $(".moreText").off();
     $(".moreText").click(function () {
