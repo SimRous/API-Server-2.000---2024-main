@@ -863,7 +863,8 @@ function newUser(){
                 </div>
             </div>
             <input type="submit" value="Enregistrer" id="saveUser" class="btn btn-primary">
-            <input type="button" value="Effacer le compte" id="deleteUser" class="btn btn-secondary">
+                         ${create?'':'<input type="button" value="Effacer le compte" id="deleteUser" class="btn btn-secondary">'}
+            
         </form>
     `);
     
