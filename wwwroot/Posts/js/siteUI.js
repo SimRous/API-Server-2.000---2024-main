@@ -501,7 +501,7 @@ function attach_Posts_UI_Events_Callback() {
                 await Likes_API.Save(data,true);
             }
         }
-        postsPanel.update();
+        postsPanel.update(false);
     });
     $(".moreText").off();
     $(".moreText").click(function () {
