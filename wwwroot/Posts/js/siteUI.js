@@ -116,7 +116,7 @@ function intialView() {
 }
 async function showPosts(reset = false) {
     intialView();
-    timeout(20)
+    timeout(60)
     $("#viewTitle").text("Fil de nouvelles");
     periodic_Refresh_paused = false;
     await postsPanel.show(reset);
@@ -893,6 +893,7 @@ function newUser(){
                 showConnexionForm();
             }
             else{
+                loggedUser = user;
                 showPosts();
             }
                 
