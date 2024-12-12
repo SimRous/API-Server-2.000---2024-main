@@ -256,7 +256,8 @@ async function renderPosts(queryString) {
     let alllikedPost = await Likes_API.GetQuery("?fields=PostId");
 
     let allLikes = [{}];
-    alllikedPost = alllikedPost.data;
+    if (!Likes_API.error)
+        alllikedPost = alllikedPost.data;
     let users = [];
     let postLikes;
     for (let i = 0;i < alllikedPost.length;i++){
